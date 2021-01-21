@@ -18,8 +18,12 @@ template(reactants=["Adsorbate", "Proton", "Electron"], products=["Reduced"], ow
 
 reverse = "Surface_Proton_Electron_Oxidation_Alpha"
 
+reactantNum = 3
+productNum = 1
+
 recipe(actions=[
-    ['INCREMENT_CHARGE', '*3'],
+    ['LOSE_CHARGE', '*3', 1],
+    # ['LOSE_RADICAL','*3', 1],
     ['CHANGE_BOND', '*1', -1, '*2'],
     ['FORM_BOND', '*1', 1, '*3'],
 ])
@@ -40,7 +44,7 @@ entry(
     label = "Proton",
     group =
 """
-1 *3 H u0 p0 c+1
+1 *3 H+ u0 p0 c+1
 """,
     kinetics = None,
 )
