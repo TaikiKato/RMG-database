@@ -35,8 +35,8 @@ entry(
     label = "Adsorbate",
     group =
 """
-1 *1 R u1 {2,[S,D,T]}
-2 *2 R u0 {1,[S,D,T]} {3,[S,D,T]}
+1 *1 R!H u1 {2,[S,D,T]}
+2 *2 R!H u0 {1,[S,D,T]} {3,[S,D,T]}
 3 *3 X u0 {2,[S,D,T]}
 """,
     kinetics = None,
@@ -68,7 +68,7 @@ entry(
     group =
 """
 1 *1 C u1 {2,[S,D,T]}
-2 *2 R u0 {1,[S,D,T]} {3,[S,D,T]}
+2 *2 R!H u0 {1,[S,D,T]} {3,[S,D,T]}
 3 *3 X u0 {2,[S,D,T]}
 """,
     kinetics = None,
@@ -80,7 +80,7 @@ entry(
     group =
 """
 1 *1 N u1 {2,[S,D,T]}
-2 *2 R u0 {1,[S,D,T]} {3,[S,D,T]}
+2 *2 R!H u0 {1,[S,D,T]} {3,[S,D,T]}
 3 *3 X u0 {2,[S,D,T]}
 """,
     kinetics = None,
@@ -93,7 +93,7 @@ entry(
     group =
 """
 1 *1 O u1 {2,S}
-2 *2 R u0 {1,S} {3,[S,D]}
+2 *2 R!H u0 {1,S} {3,[S,D]}
 3 *3 X u0 {2,[S,D]}
 """,
     kinetics = None,

@@ -35,8 +35,8 @@ entry(
     label = "Adsorbate",
     group =
 """
-1 *1 R u0 {2,[D,T]}
-2 *2 R u0 {1,[D,T]} {3,[S,D]}
+1 *1 R!H u0 {2,[D,T]}
+2 *2 R!H u0 {1,[D,T]} {3,[S,D]}
 3 *3 X u0 {2,[S,D]}
 """,
     kinetics = None,
@@ -47,7 +47,7 @@ entry(
     label = "Proton",
     group =
 """
-1 *4 H u0 p0 c+1
+1 *4 H+ u0 p0 c+1
 """,
     kinetics = None,
 )
@@ -68,7 +68,7 @@ entry(
     group =
 """
 1 *1 C u0 {2,[D,T]}
-2 *2 R u0 {1,[D,T]} {3,[S,D]}
+2 *2 R!H u0 {1,[D,T]} {3,[S,D]}
 3 *3 X u0 {2,[S,D]}
 """,
     kinetics = None,
@@ -80,7 +80,7 @@ entry(
     group =
 """
 1 *1 N u0 {2,[D,T]}
-2 *2 R u0 {1,[D,T]} {3,[S,D]}
+2 *2 R!H u0 {1,[D,T]} {3,[S,D]}
 3 *3 X u0 {2,[S,D]}
 """,
     kinetics = None,
@@ -93,7 +93,7 @@ entry(
     group =
 """
 1 *1 O u0 {2,D}
-2 *2 R u0 {1,D} {3,[S,D]}
+2 *2 R!H u0 {1,D} {3,[S,D]}
 3 *3 X u0 {2,[S,D]}
 """,
     kinetics = None,
