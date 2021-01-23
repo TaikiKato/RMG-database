@@ -20,8 +20,12 @@ template(reactants=["Adsorbate", "Proton", "Electron"], products=["Reduced"], ow
 
 reverse = "Surface_Proton_Electron_Oxidation_Beta"
 
+reactantNum = 3
+productNum = 1
+electronLabel = '*5'
+
 recipe(actions=[
-    ['INCREMENT_CHARGE', '*4'],
+    ['LOSE_CHARGE', '*4', 1],
     ['CHANGE_BOND', '*1', -1, '*2'],
     ['FORM_BOND', '*1', 1, '*4'],
 ])
