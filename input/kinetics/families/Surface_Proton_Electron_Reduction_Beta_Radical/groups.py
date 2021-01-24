@@ -7,7 +7,7 @@ longDesc = u"""
 
    *1.                       *1-*4H
     |                        |
-   *2  + *4H+ + *5e-  ---->  *2
+   *2  + *4H+ + *e-  ---->  *2
     |                        |
   ~*3~                     ~*3~   
 
@@ -22,7 +22,6 @@ reverse = "Surface_Proton_Electron_Oxidation_Beta_Radical"
 
 reactantNum = 3
 productNum = 1
-electronLabel = '*5'
 
 recipe(actions=[
     ['LOSE_CHARGE', '*4', 1],
@@ -57,7 +56,7 @@ entry(
     label = "Electron",
     group =
 """
-1 *5 e u0 p0 c-1
+1 * e u0 p0 c-1
 """,
     kinetics = None,
 )

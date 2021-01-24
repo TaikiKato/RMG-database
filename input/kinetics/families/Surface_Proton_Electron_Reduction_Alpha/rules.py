@@ -13,8 +13,8 @@ entry(
     kinetics = SurfaceChargeTransfer(
         A = (2.483E21, 'cm^3/(mol*s)'), # pre-exponential factor 1E9/s / surface_site_density / [H+]0 (1M/L)
         n = 0, # temperature coeff, 0 default
-        V0 = None, # Reversible potential (determined based on free energy of reaction)
-        Ea = (1, 'kJ/mol'), # activation energy at the reversible potential
+        V0 = None, # Reference potential
+        Ea = (10, 'kJ/mol'), # activation energy at the reversible potential
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
         ne = -1, # electron stochiometric coeff
