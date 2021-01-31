@@ -1,14 +1,27 @@
-OX
-1 *1 O u0 p2 c0 {2,D}
-2 *2 X u0 p0 c0 {1,D}
+NX
+1 *1 N u0 p1 c0 {2,T}
+2 *2 X u0 p0 c0 {1,T}
 
 H
 1 *3 H u0 p0 c+1
 
 e
-1 *4 e u0 p0 c-1
+1 * e u0 p0 c-1
 
-HOX
-1 *1 O u0 p2 c0 {2,S} {3,S}
+HNX
+1 *1 N u0 p1 c0 {2,D} {3,S}
+2 *2 X u0 p0 c0 {1,D}
+3 *3 H u0 p0 c0 {1,S}
+
+CH2X
+1 *1 C u0 p0 c0 {2,D} {3,S} {4,S}
+2 *2 X u0 p0 c0 {1,D}
+3    H u0 p0 c0 {1,S}
+4    H u0 p0 c0 {1,S}
+
+CH3X
+1 *1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 *2 X u0 p0 c0 {1,S}
 3 *3 H u0 p0 c0 {1,S}
+4    H u0 p0 c0 {1,S}
+5    H u0 p0 c0 {1,S}

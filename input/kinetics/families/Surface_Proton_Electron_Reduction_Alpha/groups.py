@@ -33,7 +33,7 @@ entry(
     label = "Adsorbate",
     group =
 """
-1 *1 R u0 {2,[D,T,Q]}
+1 *1 R!H u0 {2,[D,T,Q]}
 2 *2 X u0 {1,[D,T,Q]}
 """,
     kinetics = None,
