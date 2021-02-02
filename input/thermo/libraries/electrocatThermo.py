@@ -79,3 +79,28 @@ entry(
     metal = "Pt",
     facet = "111",
 )
+
+entry(
+    index = 4,
+    label = "CO2X",
+    molecule = 
+"""
+1 C u0 p0 {2,D} {3,D}
+2 O u0 p2 {1,D}
+3 O u0 p2 {1,D}
+4 X u0 p0
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([8.869,9.845,10.626,11.264,12.229,12.898,13.822],'cal/(mol*K)'),
+        H298 = (-100,'kcal/mol'),
+        S298 = (28.54,'cal/(mol*K)'),
+    ),
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+
+""",
+    metal = "Pt",
+    facet = "111",
+)
