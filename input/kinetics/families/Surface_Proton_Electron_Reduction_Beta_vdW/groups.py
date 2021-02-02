@@ -77,6 +77,19 @@ entry(
 
 entry(
     index = 5,
+    label = "O=C=OX",
+    group =
+"""
+1 *1 C u0 {2,D} {3,D}
+2 *2 O u0 {1,D}
+3    O u0 {1,D}
+4 *3 Xv u0
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 6,
     label = "NRX",
     group =
 """
@@ -87,9 +100,8 @@ entry(
     kinetics = None,
 )
 
-
 entry(
-    index = 6,
+    index = 7,
     label = "ORX",
     group =
 """
@@ -105,6 +117,7 @@ tree(
 """
 L1: Adsorbate
     L2: CRX
+        L3: O=C=OX
     L2: ORX
     L2: NRX
     
