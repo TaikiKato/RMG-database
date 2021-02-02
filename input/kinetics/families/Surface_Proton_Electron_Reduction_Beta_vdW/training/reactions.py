@@ -30,3 +30,26 @@ entry(
     site = "",
     rank = 5,
 )
+
+entry(
+    index = 2,
+    label = "CO2X + H + e <=> CO2HX",
+    degeneracy = 1,
+    kinetics = SurfaceChargeTransfer(
+        alpha = 0.29, # charge transfer coeff
+        A = (2.5e14, 'm^3/(mol*s)'), # pre-exponential factor estimate 10^11 s^-1 * 2.5e5 m^2/mol / 1000 m^3/mol H+
+        n = 0, # temperature coeff
+        V0 = (-0.50, 'V'), # reference potential
+        Ea = (0.90, 'eV/molecule'), # activation energy
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+        ne = -1, # electron stochiometric coeff 
+    ),
+    shortDesc = u"""https://doi.org/10.1016/j.cattod.2017.01.050""",
+    longDesc = u"""
+""",
+    metal = "Cu",
+    facet = "111",
+    site = "",
+    rank = 5,
+)

@@ -33,7 +33,7 @@ entry(
         A = (2.5e14, 'm^3/(mol*s)'), # pre-exponential factor estimate 10^11 s^-1 * 2.5e5 m^2/mol / 1000 m^3/mol H+
         n = 0, # temperature coeff, 0 default
         V0 = None, # Reference potential
-        Ea = (50, 'kJ/mol'), # activation energy at the reversible potential
+        Ea = (40, 'kJ/mol'), # activation energy at the reversible potential
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
         ne = -1, # electron stochiometric coeff
@@ -51,7 +51,7 @@ entry(
         A = (2.5e14, 'm^3/(mol*s)'), # pre-exponential factor estimate 10^11 s^-1 * 2.5e5 m^2/mol / 1000 m^3/mol H+
         n = 0, # temperature coeff, 0 default
         V0 = None, # Reference potential
-        Ea = (30, 'kJ/mol'), # activation energy at the reversible potential
+        Ea = (20, 'kJ/mol'), # activation energy at the reversible potential
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
         ne = -1, # electron stochiometric coeff
@@ -69,7 +69,7 @@ entry(
         A = (2.5e14, 'm^3/(mol*s)'), # pre-exponential factor estimate 10^11 s^-1 * 2.5e5 m^2/mol / 1000 m^3/mol H+
         n = 0, # temperature coeff, 0 default
         V0 = None, # Reference potential
-        Ea = (20, 'kJ/mol'), # activation energy at the reversible potential
+        Ea = (10, 'kJ/mol'), # activation energy at the reversible potential
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
         ne = -1, # electron stochiometric coeff
@@ -87,7 +87,7 @@ entry(
         A = (2.5e14, 'm^3/(mol*s)'), # pre-exponential factor estimate 10^11 s^-1 * 2.5e5 m^2/mol / 1000 m^3/mol H+
         n = 0, # temperature coeff, 0 default
         V0 = None, # Reference potential
-        Ea = (60, 'kJ/mol'), # activation energy at the reversible potential
+        Ea = (40, 'kJ/mol'), # activation energy at the reversible potential
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
         ne = -1, # electron stochiometric coeff
@@ -105,7 +105,7 @@ entry(
         A = (2.5e14, 'm^3/(mol*s)'), # pre-exponential factor estimate 10^11 s^-1 * 2.5e5 m^2/mol / 1000 m^3/mol H+
         n = 0, # temperature coeff, 0 default
         V0 = None, # Reference potential
-        Ea = (20, 'kJ/mol'), # 
+        Ea = (10, 'kJ/mol'), # 
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
         ne = -1, # electron stochiometric coeff
@@ -123,7 +123,7 @@ entry(
         A = (2.5e14, 'm^3/(mol*s)'), # pre-exponential factor estimate 10^11 s^-1 * 2.5e5 m^2/mol / 1000 m^3/mol H+
         n = 0, # temperature coeff, 0 default
         V0 = None, # Reference potential
-        Ea = (40, 'kJ/mol'), # 
+        Ea = (20, 'kJ/mol'), # 
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
         ne = -1, # electron stochiometric coeff
@@ -141,7 +141,7 @@ entry(
         A = (2.5e14, 'm^3/(mol*s)'), # pre-exponential factor estimate 10^11 s^-1 * 2.5e5 m^2/mol / 1000 m^3/mol H+
         n = 0, # temperature coeff, 0 default
         V0 = None, # Reference potential
-        Ea = (30, 'kJ/mol'), # 
+        Ea = (20, 'kJ/mol'), # 
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
         ne = -1, # electron stochiometric coeff
