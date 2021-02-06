@@ -114,5 +114,6 @@ electrochem = {
 
 electrochem_development = {
     'Surface_Proton_Electron_Reduction_Alpha_Heyrovsky',
+    'Surface_Proton_Electron_Reduction_Alpha_vdW_Heyrovsky',
    # 'Surface_Proton_Electron_Reduction_Beta_Radical',
 }
