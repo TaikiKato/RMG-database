@@ -72,6 +72,66 @@ entry(
 
 entry(
     index = 5,
+    label = "CTX",
+    group =
+"""
+1 *1 C u0 {2,T}
+2 *2 X u0 {1,T}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 6,
+    label = "HCX",
+    group =
+"""
+1 *1 C u0 {2,T} {3,S}
+2 *2 X u0 {1,T}
+3    H u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 7,
+    label = "C=X",
+    group =
+"""
+1 *1 C u0 {2,D}
+2 *2 X u0 {1,D}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 8,
+    label = "H2C=X",
+    group =
+"""
+1 *1 C u0 {2,D} {3,S} {4,S}
+2 *2 X u0 {1,D}
+3    H u0 {1,S}
+4    H u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 9,
+    label = "O=C=X",
+    group =
+"""
+1 *1 C u0 {2,D} {3,D}
+2 *2 X u0 {1,D}
+3    O2d u0 {1,D}
+""",
+    kinetics = None,
+)
+
+
+entry(
+    index = 10,
     label = "OX",
     group =
 """
@@ -83,7 +143,7 @@ entry(
 
 
 entry(
-    index = 6,
+    index = 11,
     label = "NX",
     group =
 """
@@ -94,19 +154,41 @@ entry(
 )
 
 entry(
-    index = 7,
-    label = "O=C=X",
+    index = 12,
+    label = "NTX",
     group =
 """
-1 *1 C u0 {2,D} {3,D}
-2 *2 X u0 {1,D}
-3    O2d u0 {1,D}
+1 *1 N u0 {2,T}
+2 *2 X u0 {1,T}
 """,
     kinetics = None,
 )
 
 entry(
-    index = 8,
+    index = 13,
+    label = "N=X",
+    group =
+"""
+1 *1 N u0 {2,D}
+2 *2 X u0 {1,D}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 14,
+    label = "HN=X",
+    group =
+"""
+1 *1 N u0 {2,D} {3,S}
+2 *2 X u0 {1,D}
+3    N u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 15,
     label = "N-N=X",
     group =
 """
@@ -121,10 +203,17 @@ tree(
 """
 L1: Adsorbate
     L2: CX
-        L3: O=C=X
+        L3: CTX
+            L4: HCX
+        L3: C=X
+            L4: O=C=X
+            L4: H2C=X
     L2: OX
     L2: NX
-        L3: N-N=X
+        L3: NTX
+        L3: N=X
+            L4: HN=X
+            L4: N-N=X
 
 L1: Proton
 
