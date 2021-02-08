@@ -52,7 +52,7 @@ entry(
     label = "Adsorbate2",
     group =
 """
-2 *5 X u0
+2 *5 Xv u0
 """,
     kinetics = None,
 )
