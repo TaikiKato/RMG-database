@@ -1,28 +1,29 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-name = "Surface_Proton_Electron_Reduction_Alpha_Dissociation/groups"
+name = "Surface_Proton_Electron_Reduction_Alpha_vdW_Heyrovsky/groups"
 shortDesc = u""
 longDesc = u"""
 
-   *1                                       *1-*3H
-    |  + *3H+ + *e-  ---->            +
-  ~*2~                      ~*2~~
+   *1                           *1-*3H
+    |  + *3H..*4OH2 + *e- ---->                   + *4OH2
+  ~*2~                                    ~*2~~
 
 The rate, which should be in mol/m2/s,
 will be given by k * (mol/m2) * (mol/m3) * 1
 so k should be in (m3/mol/s).
 """
 
-template(reactants=["Adsorbate", "Proton", "Electron"], products=["surfaceSite","Reduced"], ownReverse=False)
+template(reactants=["Adsorbate", "H3O", "Electron"], products=["Reduced","Surface_Site","water"], ownReverse=False)
 
-reverse = "Surface_Proton_Electron_Oxidation_Alpha_Association"
+reverse = "Surface_Proton_Electron_Oxidaion_Alpha_vdW_Heyrovsky"
 
 reactantNum = 3
-productNum = 2
+productNum = 3
 allowChargedSpecies = True
 
 recipe(actions=[
+    ['BREAK_BOND','*3', 0, '*4'],
     ['LOSE_CHARGE', '*3', 1],
     ['BREAK_BOND', '*1', 1, '*2'],
     ['FORM_BOND', '*1', 1, '*3'],
@@ -41,10 +42,13 @@ entry(
 
 entry(
     index = 2,
-    label = "Proton",
+    label = "H3O",
     group =
 """
-1 *3 H+ u0 p0 c+1
+1 H u0 p0 c0 {3,S}
+2 H u0 p0 c0 {3,S}
+3 *4 O u0 p2 c0 {1,S} {2,S}
+4 *3 H+ u0 p0 c+1
 """,
     kinetics = None,
 )
@@ -100,7 +104,7 @@ L1: Adsorbate
     L2: OX
     L2: NX
 
-L1: Proton
+L1: H3O
 
 L1: Electron
 """
