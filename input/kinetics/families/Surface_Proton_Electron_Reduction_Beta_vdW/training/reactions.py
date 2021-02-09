@@ -53,3 +53,25 @@ entry(
     site = "",
     rank = 5,
 )
+
+entry(
+    index = 3,
+    label = "N2X + H + e <=> HNNX",
+    degeneracy = 1,
+    kinetics = SurfaceChargeTransfer(
+        A = (2.5e14, 'm^3/(mol*s)'), # pre-exponential factor estimate 10^11 s^-1 * 2.5e5 m^2/mol / 1000 m^3/mol H+
+        n = 0, # temperature coeff
+        V0 = (0.0, 'V'), # reference potential
+        Ea = (1.46, 'eV/molecule'), # activation energy
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+        ne = -1, # electron stochiometric coeff 
+    ),
+    shortDesc = u"""https://pubs.rsc.org/en/content/getauthorversionpdf/c8cy01845f Table 1""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+    site = "",
+    rank = 5,
+)

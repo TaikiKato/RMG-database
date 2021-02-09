@@ -16,3 +16,14 @@ CO2HX
 3    O u0 p2 c0 {2,D}
 4 *4 H u0 p0 c0 {1,S}
 5 *3 X u0 p0 c0 {2,S}
+
+N2X
+1 *1 N u0 p1 c0 {2,T}
+2 *2 N u0 p1 c0 {1,T}
+3 *3 X u0 p0 c0
+
+HNNX
+1 *1 N u0 p1 c0 {2,D} {3,S}
+2 *2 N u0 p1 c0 {1,D} {4,S}
+3 *4 H u0 p0 c0 {1,S}
+4 *3 X u0 p0 c0 {2,S}
