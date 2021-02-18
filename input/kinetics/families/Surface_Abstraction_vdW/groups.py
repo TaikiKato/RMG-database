@@ -4,7 +4,7 @@
 name = "Surface_Abstraction_vdW/groups"
 shortDesc = u""
 longDesc = u"""
-A vdW species splitting, adsorbing to the surface, and transferring a functional group to a double, triple, or
+A vdW species splitting, adsorbing to the surface, and transferring a functional group to a single, double, triple, or
 quadruple bonded surface species.
 
  *2-*3  *4             *2     *4-*3
@@ -49,8 +49,8 @@ entry(
     label = "Adsorbate1",
     group =
 """
-1 *5 X   u0 p0 c0 {2,[D,T,Q]}
-2 *4 R!H ux px cx {1,[D,T,Q]}
+1 *5 X   u0 p0 c0 {2,[S,D,T,Q]}
+2 *4 R!H ux px cx {1,[S,D,T,Q]}
 """,
     kinetics = None,
 )
