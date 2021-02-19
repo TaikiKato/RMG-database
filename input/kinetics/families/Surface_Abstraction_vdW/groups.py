@@ -511,6 +511,8 @@ tree(
 L1: AdsorbateVdW
     L2: H-H
     L2: O-R
+        L3: O-H
+            L4: H2O
         L3: O-O
             L4: HO-OH
         L3: O-N
@@ -527,13 +529,24 @@ L1: AdsorbateVdW
             L4: C-OH
         L3: C-N
     L2: N-R
+        L3: N-H
+            L4: NH3
         L3: N-N
         L3: N-O
         L3: N-C
 
 L1: Adsorbate1
-    L2: *=O
+    L2: *O
+        L3: *-O
+            L4: *-O-R
+                L5: *-O-H
+                L5: *-O-O=N #Maybe don't need this? or make it *-O-O
+                L5: *-O-N=O #Maybe don't need this? or make it *-O-N
+        L3: *=O
     L2: *C
+        L3: *-C
+            L4: *-CH=R
+            L4: *-C-3R
         L3: *=C
             L4: *=C=R
             L4: *=C-2R
@@ -541,10 +554,20 @@ L1: Adsorbate1
             L4:*#CH
         L3: *$C
     L2: *N
+        L3: *-N
+            L4: *-N=R
+                L5: *-N=O
+                L5: *-N=NH
+            L4: *-N-2R
+                L5: *-NH2
+                L5: *-NH-NH2 #Maybe don't need this? or use *-NH-N or *-N-N or *-NN
+                L5: *-NH-OH #Maybe don't need this? or use *-NH-O or *-N-O or *-NO
         L3: *=N
             L4: *=NH
             L4: *=NO
                 L5: *=NOH
+            L4: *=NN
+                L5: *=N-N=O
         L3: *#N
 """
 )
