@@ -488,7 +488,7 @@ entry(
 multiplicity [1]
 1 *1 Xv u0 p0 c0
 2 *2 N  ux px cx {3,S}
-3 *3 O  ux px cx {2,S}
+3 *3 O  u0 p2 c0 {2,S}
 """,
     kinetics = None,
 )
@@ -513,7 +513,7 @@ entry(
 """
 multiplicity [1]
 1 *1 Xv u0 p0 c0
-2 *2 O  ux px cx {3,S}
+2 *2 O  u0 p2 c0 {3,S}
 3 *3 H  u0 p0 c0 {2,S}
 """,
     kinetics = None,
@@ -540,7 +540,7 @@ entry(
 """
 multiplicity [1]
 1 *1 Xv u0 p0 c0
-2 *2 N  ux px cx {3,S}
+2 *2 N  u0 p1 c0 {3,S}
 3 *3 H  u0 p0 c0 {2,S}
 """,
     kinetics = None,
@@ -602,7 +602,7 @@ entry(
 """
 1 *5 X u0 p0 c0 {2,S}
 2 *4 O u0 p2 c0 {1,S} {3,S}
-3    O ux px cx {2,S}
+3    O ux p2 c0 {2,S}
 """,
     kinetics = None,
 )
@@ -614,7 +614,7 @@ entry(
 """
 1 *5 X u0 p0 c0 {2,S}
 2 *4 O u0 p2 c0 {1,S} {3,S}
-3    N ux px cx {2,S}
+3    N u0 p2 c0 {2,S}
 """,
     kinetics = None,
 )
@@ -763,7 +763,7 @@ entry(
 """
 1 *5 X u0 p0 c0 {2,D}
 2 *4 N u0 p1 c0 {1,D} {3,S}
-3    N u0 p1 c0 {2,S}     
+3    N u0 px c0 {2,S}     
 """,
     kinetics = None,
 )
