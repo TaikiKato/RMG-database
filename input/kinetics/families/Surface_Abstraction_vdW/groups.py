@@ -97,8 +97,8 @@ entry(
     label = "*C",
     group =
 """
-1 *5 X u0 p0 c0 {2,[D,T,Q]}
-2 *4 C ux px cx {1,[D,T,Q]}
+1 *5 X u0 p0 c0 {2,[S,D,T,Q]}
+2 *4 C ux px cx {1,[S,D,T,Q]}
 """,
     kinetics = None,
 )
@@ -134,8 +134,8 @@ entry(
     label = "*N",
     group =
 """
-1 *5 X u0 p0 c0 {2,[D,T]}
-2 *4 N ux px cx {1,[D,T]}
+1 *5 X u0 p0 c0 {2,[S,D,T]}
+2 *4 N ux px cx {1,[S,D,T]}
 """,
     kinetics = None,
 )
@@ -175,7 +175,7 @@ entry(
 
 entry(
     index = 13,
-    label = "*#CH",
+    label = "*#C-H",
     group =
 """
 1 *5 X u0 p0 c0 {2,T}
@@ -234,7 +234,7 @@ entry(
 
 entry(
     index = 18,
-    label = "*=NH",
+    label = "*=N-H",
     group =
 """
 1 *5 X u0 p0 c0 {2,D}
@@ -246,7 +246,7 @@ entry(
 
 entry(
     index = 19,
-    label = "*=NO",
+    label = "*=N-O",
     group =
 """
 1 *5 X u0 p0 c0 {2,D}
@@ -488,7 +488,7 @@ entry(
 multiplicity [1]
 1 *1 Xv u0 p0 c0
 2 *2 N  ux px cx {3,S}
-3 *3 O  u0 p2 c0 {2,S}
+3 *3 O  ux px cx {2,S}
 """,
     kinetics = None,
 )
@@ -502,6 +502,281 @@ multiplicity [1]
 1 *1 Xv u0 p0 c0
 2 *2 N  ux px cx {3,S}
 3 *3 C  ux px cx {2,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 38,
+    label = "O-H",
+    group =
+"""
+multiplicity [1]
+1 *1 Xv u0 p0 c0
+2 *2 O  ux px cx {3,S}
+3 *3 H  u0 p0 c0 {2,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 39,
+    label = "H2O",
+    group =
+"""
+multiplicity [1]
+1 *1 Xv u0 p0 c0
+2 *2 O  u0 p2 c0 {3,S} {4,S}
+3 *3 H  u0 p0 c0 {2,S}
+4    H  u0 p0 c0 {2,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 40,
+    label = "N-H",
+    group =
+"""
+multiplicity [1]
+1 *1 Xv u0 p0 c0
+2 *2 N  ux px cx {3,S}
+3 *3 H  u0 p0 c0 {2,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 41,
+    label = "NH3",
+    group =
+"""
+multiplicity [1]
+1 *1 Xv u0 p0 c0
+2 *2 N  u0 p1 c0 {3,S} {4,S} {5,S}
+3 *3 H  u0 p0 c0 {2,S}
+4    H  u0 p0 c0 {2,S}
+5    H  u0 p0 c0 {2,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 42,
+    label = "*O",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,[S,D]}
+2 *4 O u0 p2 c0 {1,[S,D]}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 43,
+    label = "*-O",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,S}
+2 *4 O u0 p2 c0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 44,
+    label = "*-O-H",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,S}
+2 *4 O u0 p2 c0 {1,S} {3,S}
+3    H u0 p0 c0 {2,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 45,
+    label = "*-O-O",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,S}
+2 *4 O u0 p2 c0 {1,S} {3,S}
+3    O ux px cx {2,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 46,
+    label = "*-O-N",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,S}
+2 *4 O u0 p2 c0 {1,S} {3,S}
+3    N ux px cx {2,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 47,
+    label = "*-C",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,S}
+2 *4 C ux px cx {1,S}
+""",
+    kinetics = None,
+)
+
+
+entry(
+    index = 48,
+    label = "*-C=R",
+    group =
+"""
+1 *5 X   u0 p0 c0 {2,S}
+2 *4 C   ux px cx {1,S} {3,D}
+3    R!H ux px cx {2,D}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 49,
+    label = "*-C-3R",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,S}
+2 *4 C u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
+3    R ux px cx {2,S}
+4    R ux px cx {2,S}
+5    R ux px cx {2,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 50,
+    label = "*-N",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,S}
+2 *4 N ux px cx {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 51,
+    label = "*-N=R",
+    group =
+"""
+1 *5 X   u0 p0 c0 {2,S}
+2 *4 N   u0 p1 c0 {1,S} {3,D}
+3    R!H ux px cx {2,D}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 52,
+    label = "*-N=O",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,S}
+2 *4 N u0 p1 c0 {1,S} {3,D}
+3    O ux px cx {2,D}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 53,
+    label = "*-N=N",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,S}
+2 *4 N u0 p1 c0 {1,S} {3,D}
+3    N ux px cx {2,D}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 54,
+    label = "*-N-2R",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,S}
+2 *4 N u0 p1 c0 {1,S} {3,S} {4,S}
+3    R ux px cx {2,S}
+4    R ux px cx {2,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 55,
+    label = "*-NH2",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,S}
+2 *4 N u0 p1 c0 {1,S} {3,S} {4,S}
+3    H u0 p0 c0 {2,S}
+4    H u0 p0 c0 {2,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 56,
+    label = "*-NH-N",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,S}
+2 *4 N u0 p1 c0 {1,S} {3,S} {4,S}
+3    N u0 p1 c0 {2,S}
+4    H u0 p0 c0 {2,S}
+""",
+    kinetics = None,
+)  
+
+entry(
+    index = 57,
+    label = "*-NH-O",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,S}
+2 *4 N u0 p1 c0 {1,S} {3,S} {4,S}
+3    O u0 p2 c0 {2,S}
+4    H u0 p0 c0 {2,S}
+""",
+    kinetics = None,
+) 
+
+entry(
+    index = 58,
+    label = "*=N-N",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,D}
+2 *4 N u0 p1 c0 {1,D} {3,S}
+3    N u0 p1 c0 {2,S}     
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 59,
+    label = "*=N-N=O",
+    group =
+"""
+1 *5 X u0 p0 c0 {2,D}
+2 *4 N u0 p1 c0 {1,D} {3,S}
+3    N u0 p1 c0 {2,S} {4,D}
+4    O u0 p2 c0 {3,D}
 """,
     kinetics = None,
 )
@@ -537,36 +812,35 @@ L1: AdsorbateVdW
 
 L1: Adsorbate1
     L2: *O
-        L3: *-O
-            L4: *-O-R
-                L5: *-O-H
-                L5: *-O-O=N #Maybe don't need this? or make it *-O-O
-                L5: *-O-N=O #Maybe don't need this? or make it *-O-N
+        L3: *-O           
+            L4: *-O-H
+            L4: *-O-O
+            L4: *-O-N
         L3: *=O
     L2: *C
         L3: *-C
-            L4: *-CH=R
+            L4: *-C=R
             L4: *-C-3R
         L3: *=C
             L4: *=C=R
             L4: *=C-2R
         L3: *#C
-            L4:*#CH
+            L4:*#C-H
         L3: *$C
     L2: *N
         L3: *-N
             L4: *-N=R
                 L5: *-N=O
-                L5: *-N=NH
+                L5: *-N=N
             L4: *-N-2R
                 L5: *-NH2
-                L5: *-NH-NH2 #Maybe don't need this? or use *-NH-N or *-N-N or *-NN
-                L5: *-NH-OH #Maybe don't need this? or use *-NH-O or *-N-O or *-NO
+                L5: *-NH-N
+                L5: *-NH-O
         L3: *=N
-            L4: *=NH
-            L4: *=NO
+            L4: *=N-H
+            L4: *=N-O
                 L5: *=NOH
-            L4: *=NN
+            L4: *=N-N
                 L5: *=N-N=O
         L3: *#N
 """
