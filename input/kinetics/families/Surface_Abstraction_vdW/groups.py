@@ -4,7 +4,7 @@
 name = "Surface_Abstraction_vdW/groups"
 shortDesc = u""
 longDesc = u"""
-A vdW species splitting, adsorbing to the surface, and transferring a functional group to a single, double, triple, or
+A vdW species splitting, adsorbing to the surface, and transferring a functional group to a double, triple, or
 quadruple bonded surface species.
 
  *2-*3  *4             *2     *4-*3
@@ -26,7 +26,7 @@ productNum=2
 
 recipe(actions=[
     ['BREAK_BOND', '*2', 1, '*3'],
-    ['CHANGE_BOND', '*1', 1, '*2'],
+    ['FORM_BOND', '*1', 1, '*2'],
     ['CHANGE_BOND', '*4', -1, '*5'],
     ['FORM_BOND', '*3', 1, '*4'],
 ])
@@ -49,8 +49,8 @@ entry(
     label = "Adsorbate1",
     group =
 """
-1 *5 X   u0 p0 c0 {2,[S,D,T,Q]}
-2 *4 R!H ux px cx {1,[S,D,T,Q]}
+1 *5 X   u0 p0 c0 {2,[D,T,Q]}
+2 *4 R!H ux px cx {1,[D,T,Q]}
 """,
     kinetics = None,
 )
@@ -97,8 +97,8 @@ entry(
     label = "*C",
     group =
 """
-1 *5 X u0 p0 c0 {2,[S,D,T,Q]}
-2 *4 C ux px cx {1,[S,D,T,Q]}
+1 *5 X u0 p0 c0 {2,[D,T,Q]}
+2 *4 C ux px cx {1,[D,T,Q]}
 """,
     kinetics = None,
 )
@@ -134,8 +134,8 @@ entry(
     label = "*N",
     group =
 """
-1 *5 X u0 p0 c0 {2,[S,D,T]}
-2 *4 N ux px cx {1,[S,D,T]}
+1 *5 X u0 p0 c0 {2,[D,T]}
+2 *4 N ux px cx {1,[D,T]}
 """,
     kinetics = None,
 )
@@ -175,7 +175,7 @@ entry(
 
 entry(
     index = 13,
-    label = "*#C-H",
+    label = "*#CH",
     group =
 """
 1 *5 X u0 p0 c0 {2,T}
@@ -234,7 +234,7 @@ entry(
 
 entry(
     index = 18,
-    label = "*=N-H",
+    label = "*=NH",
     group =
 """
 1 *5 X u0 p0 c0 {2,D}
@@ -246,7 +246,7 @@ entry(
 
 entry(
     index = 19,
-    label = "*=N-O",
+    label = "*=NO",
     group =
 """
 1 *5 X u0 p0 c0 {2,D}
@@ -506,288 +506,11 @@ multiplicity [1]
     kinetics = None,
 )
 
-entry(
-    index = 38,
-    label = "O-H",
-    group =
-"""
-multiplicity [1]
-1 *1 Xv u0 p0 c0
-2 *2 O  u0 p2 c0 {3,S}
-3 *3 H  u0 p0 c0 {2,S}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 39,
-    label = "H2O",
-    group =
-"""
-multiplicity [1]
-1 *1 Xv u0 p0 c0
-2 *2 O  u0 p2 c0 {3,S} {4,S}
-3 *3 H  u0 p0 c0 {2,S}
-4    H  u0 p0 c0 {2,S}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 40,
-    label = "N-H",
-    group =
-"""
-multiplicity [1]
-1 *1 Xv u0 p0 c0
-2 *2 N  u0 p1 c0 {3,S}
-3 *3 H  u0 p0 c0 {2,S}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 41,
-    label = "NH3",
-    group =
-"""
-multiplicity [1]
-1 *1 Xv u0 p0 c0
-2 *2 N  u0 p1 c0 {3,S} {4,S} {5,S}
-3 *3 H  u0 p0 c0 {2,S}
-4    H  u0 p0 c0 {2,S}
-5    H  u0 p0 c0 {2,S}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 42,
-    label = "*O",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,[S,D]}
-2 *4 O u0 p2 c0 {1,[S,D]}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 43,
-    label = "*-O",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,S}
-2 *4 O u0 p2 c0 {1,S}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 44,
-    label = "*-O-H",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,S}
-2 *4 O u0 p2 c0 {1,S} {3,S}
-3    H u0 p0 c0 {2,S}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 45,
-    label = "*-O-O",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,S}
-2 *4 O u0 p2 c0 {1,S} {3,S}
-3    O ux p2 c0 {2,S}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 46,
-    label = "*-O-N",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,S}
-2 *4 O u0 p2 c0 {1,S} {3,S}
-3    N u0 p2 c0 {2,S}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 47,
-    label = "*-C",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,S}
-2 *4 C ux px cx {1,S}
-""",
-    kinetics = None,
-)
-
-
-entry(
-    index = 48,
-    label = "*-C=R",
-    group =
-"""
-1 *5 X   u0 p0 c0 {2,S}
-2 *4 C   ux px cx {1,S} {3,D}
-3    R!H ux px cx {2,D}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 49,
-    label = "*-C-3R",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,S}
-2 *4 C u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
-3    R ux px cx {2,S}
-4    R ux px cx {2,S}
-5    R ux px cx {2,S}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 50,
-    label = "*-N",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,S}
-2 *4 N ux px cx {1,S}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 51,
-    label = "*-N=R",
-    group =
-"""
-1 *5 X   u0 p0 c0 {2,S}
-2 *4 N   u0 p1 c0 {1,S} {3,D}
-3    R!H ux px cx {2,D}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 52,
-    label = "*-N=O",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,S}
-2 *4 N u0 p1 c0 {1,S} {3,D}
-3    O ux px cx {2,D}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 53,
-    label = "*-N=N",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,S}
-2 *4 N u0 p1 c0 {1,S} {3,D}
-3    N ux px cx {2,D}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 54,
-    label = "*-N-2R",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,S}
-2 *4 N u0 p1 c0 {1,S} {3,S} {4,S}
-3    R ux px cx {2,S}
-4    R ux px cx {2,S}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 55,
-    label = "*-NH2",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,S}
-2 *4 N u0 p1 c0 {1,S} {3,S} {4,S}
-3    H u0 p0 c0 {2,S}
-4    H u0 p0 c0 {2,S}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 56,
-    label = "*-NH-N",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,S}
-2 *4 N u0 p1 c0 {1,S} {3,S} {4,S}
-3    N u0 p1 c0 {2,S}
-4    H u0 p0 c0 {2,S}
-""",
-    kinetics = None,
-)  
-
-entry(
-    index = 57,
-    label = "*-NH-O",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,S}
-2 *4 N u0 p1 c0 {1,S} {3,S} {4,S}
-3    O u0 p2 c0 {2,S}
-4    H u0 p0 c0 {2,S}
-""",
-    kinetics = None,
-) 
-
-entry(
-    index = 58,
-    label = "*=N-N",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,D}
-2 *4 N u0 p1 c0 {1,D} {3,S}
-3    N u0 px c0 {2,S}     
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 59,
-    label = "*=N-N=O",
-    group =
-"""
-1 *5 X u0 p0 c0 {2,D}
-2 *4 N u0 p1 c0 {1,D} {3,S}
-3    N u0 p1 c0 {2,S} {4,D}
-4    O u0 p2 c0 {3,D}
-""",
-    kinetics = None,
-)
-
 tree(
 """
 L1: AdsorbateVdW
     L2: H-H
     L2: O-R
-        L3: O-H
-            L4: H2O
         L3: O-O
             L4: HO-OH
         L3: O-N
@@ -804,44 +527,24 @@ L1: AdsorbateVdW
             L4: C-OH
         L3: C-N
     L2: N-R
-        L3: N-H
-            L4: NH3
         L3: N-N
         L3: N-O
         L3: N-C
 
 L1: Adsorbate1
-    L2: *O
-        L3: *-O           
-            L4: *-O-H
-            L4: *-O-O
-            L4: *-O-N
-        L3: *=O
+    L2: *=O
     L2: *C
-        L3: *-C
-            L4: *-C=R
-            L4: *-C-3R
         L3: *=C
             L4: *=C=R
             L4: *=C-2R
         L3: *#C
-            L4:*#C-H
+            L4:*#CH
         L3: *$C
     L2: *N
-        L3: *-N
-            L4: *-N=R
-                L5: *-N=O
-                L5: *-N=N
-            L4: *-N-2R
-                L5: *-NH2
-                L5: *-NH-N
-                L5: *-NH-O
         L3: *=N
-            L4: *=N-H
-            L4: *=N-O
+            L4: *=NH
+            L4: *=NO
                 L5: *=NOH
-            L4: *=N-N
-                L5: *=N-N=O
         L3: *#N
 """
 )
