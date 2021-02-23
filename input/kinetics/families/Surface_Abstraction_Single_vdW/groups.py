@@ -634,17 +634,32 @@ L1: Adsorbate1
 )
 
 forbidden(
-    label = "chargedBond",
+    label = "chargedBond1",
     group =
 """
-1 *2 R!H ux c[+1,-1] {2,[S,D]}
-2 *3 R!H ux c[+1,-1] {1,[S,D]}
+1 *2 R!H ux c[+1,-1] {2,S}
+2 *3 R!H ux c[+1,-1] {1,S}
 3 *1 Xv  u0 p0 c0
 """,
     shortDesc = u"""""",
     longDesc =
 u"""
 The adsorbing molecule should not have a charge on the surface.
+""",
+)
+
+forbidden(
+    index = 2,
+    label = "chargedBond2",
+    group =
+"""
+1 *5 X u0 p0 c0    {2,S}
+2 *4 R ux c[+1,-1] {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+The molecule should not have a charge on the surface.
 """,
 )
 
