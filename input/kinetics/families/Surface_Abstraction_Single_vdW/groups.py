@@ -515,7 +515,7 @@ entry(
 """
 1 *5 X u0 p0 c0 {2,S}
 2 *4 N u0 p1 c0 {1,S} {3,D}
-3    O ux px cx {2,D}
+3    O u0 p2 c0 {2,D}
 """,
     kinetics = None,
 )
@@ -525,9 +525,10 @@ entry(
     label = "*N=N",
     group =
 """
+multiplicity [1]
 1 *5 X u0 p0 c0 {2,S}
 2 *4 N u0 p1 c0 {1,S} {3,D}
-3    N ux px cx {2,D}
+3    N u0 p1 c0 {2,D}
 """,
     kinetics = None,
 )
@@ -631,3 +632,19 @@ L1: Adsorbate1
             L4: *NH-N
 """
 )
+
+forbidden(
+    label = "chargedBond",
+    group =
+"""
+1 *2 R!H ux c[+1,-1] {2,[S,D]}
+2 *3 R!H ux c[+1,-1] {1,[S,D]}
+3 *1 Xv  u0 p0 c0
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+The adsorbing molecule should not have a charge on the surface.
+""",
+)
+
