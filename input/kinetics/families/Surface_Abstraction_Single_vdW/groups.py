@@ -561,7 +561,7 @@ entry(
 
 entry(
     index = 41,
-    label = "*-NH-O",
+    label = "*NH-O",
     group =
 """
 1 *5 X u0 p0 c0 {2,S}
