@@ -39,6 +39,7 @@ entry(
        Ea = (0, 'J/mol'),
        Tmin = (200, 'K'),
        Tmax = (3000, 'K'),
+       cov = {'Ni_3': {'E': (0.0,'J/mol'), 'm': -1.0, 'a': 0.0}},
    ),
    rank = 10,
    shortDesc = u"""H2 on Pt""",
@@ -48,6 +49,8 @@ entry(
     doi: 10.1016.j.apcatb.2007.08.008
 
     This is R2
+
+    and coverages from R. Quiceno, J. Perez-Ramyrez, J. Warnatz, O. Deutschmann. Appl. Catal. A: General (2006)
     """,
     metal = 'Pt'
 )
