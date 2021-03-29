@@ -39,7 +39,7 @@ entry(
        Ea = (0, 'J/mol'),
        Tmin = (200, 'K'),
        Tmax = (3000, 'K'),
-       cov = {'Ni_3': {'E': (0.0,'J/mol'), 'm': -1.0, 'a': 0.0}},
+       coverage_dependence = {'Ni_3': {'E': (0.0,'J/mol'), 'm': -1.0, 'a': 0.0}},
    ),
    rank = 10,
    shortDesc = u"""H2 on Pt""",
