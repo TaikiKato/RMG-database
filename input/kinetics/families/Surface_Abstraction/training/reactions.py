@@ -118,7 +118,7 @@ A factor from paper / surface site density of Cu
 
 entry(
     index = 5,
-    label = "NH2_Pt + O_Pt <=> NH_Pt + HO_Pt",
+    label = "NH2_Pt + O* <=> NH_Pt + OH*",
     degeneracy = 1,
     kinetics = SurfaceArrhenius(
         A = (2.4567e+17, 'm^2/(mol*s)'),
@@ -141,7 +141,7 @@ A factor from paper / surface site density of Pt
 
 entry(
     index = 6,
-    label = "NHr_Pt + O_Pt <=> N_Pt + HO_Pt",
+    label = "NHr_Pt + O* <=> N_Pt + OH*",
     degeneracy = 1,
     kinetics = SurfaceArrhenius(
         A = (4.027e+17, 'm^2/(mol*s)'),
