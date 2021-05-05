@@ -20,7 +20,7 @@ entry(
             DFT binfing energy on Cu111: -0.08 eV. 
             delta BE: -0.054 - (-0.08) = 0.026 eV = 0.026 eV * (1.602176565e-19 J/eV) * (6.02214*10^23) = 2508 J/mol
             
-            a5_low = -1.86700333*10^3 + (2508 J/mol) / (8.3145 J/mol K) = 1.565287266E-03
+            a5_low = -1.86700333*10^3 + (2508 J/mol) / (8.3145 J/mol K) = -1.565287266E-03
             a5_high = -1.89107687*10^3 + (2508 J/mol) / (8.3145 J/mol K) = -1.589360806E-03
             
             Source for H2 Binding Energy: 
@@ -29,6 +29,6 @@ entry(
             Table 7, PBE-D2 value
             DOI:10.1016/j.susc.2015.08.005""",
 
-    metal = "Pt",
+    metal = "Cu",
     facet = "111",
 )
